@@ -1,3 +1,7 @@
+
+ /* COLORES DE FONDO PRINCIPALES */
+
+
 .bg-type-normal { background-color: #bdbdbd !important; color: #222 !important; }
 .bg-type-electric { background-color: #f7d02c !important; color: #222 !important; }
 .bg-type-fire { background-color: #ee8130 !important; color: #fff !important; }
@@ -16,7 +20,8 @@
 .bg-type-ghost { background-color: #313d70 !important; color: #fff !important; }
 .bg-type-dark { background-color: #222222 !important; color: #fff !important; }
 .bg-type-dragon { background-color: #3f23bb !important; color: #fff !important; }
-/* Recuadros de atributos con borde de color según tipo */
+
+/* Contenedor para altura, peso y habilidades*/
 .attr-box {
     display: inline-block;
     padding: 4px 12px;
@@ -30,7 +35,7 @@
     transition: border-color 0.3s;
 }
 
-/* Bordes por tipo */
+/* Color de los bordes por tipo */
 .border-type-normal { border-color: #bdbdbd !important; }
 .border-type-electric { border-color: #f7d02c !important; }
 .border-type-fire { border-color: #ee8130 !important; }
@@ -49,6 +54,7 @@
 .border-type-ghost { border-color: #313d70 !important; }
 .border-type-dark { border-color: #222222 !important; }
 .border-type-dragon { border-color: #3f23bb !important; }
+
 /* Fondos dinámicos tipo cómic para cada tipo de Pokémon */
 .bg-type {
     min-height: 100vh;
@@ -147,7 +153,11 @@
     background-image: radial-gradient(rgba(35, 1, 109, 0.274) 2px, transparent 2.5px);
     background-size: 24px 24px;
 }
+
+
 /* Centrado del contenido principal */
+
+
 .main-center {
     display: flex;
     flex-direction: column;
@@ -155,12 +165,14 @@
 }
 
 /* Barra de filtros */
+
 .filter-bar {
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 #type-filter {
     padding: 10px 18px;
     border-radius: 20px;
@@ -188,6 +200,8 @@
     border-radius: 10px;
     padding: 8px 0;
 }
+
+/* Contenedor flex para  centrar, v y h  */
 body {
     margin: 0;
     padding: 0;
@@ -198,12 +212,17 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Contenedor principal */
+
 .app-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 600px; /* Adjust width to accommodate buttons */
 }
+
+
+/* Tarjeta de los pokemon */
 
 .card {
    width: 400px;
@@ -217,7 +236,8 @@ body {
     position: relative;
 }
 
-/* Efecto de escáner */
+/* Efecto del escáner */
+
 .scanner-line {
     position: absolute;
     left: 0;
@@ -249,15 +269,22 @@ body {
     }
 }
 
+/* Efecto - tarjeta desaparece suavemente */
+
 .fade-out {
     opacity: 0;
     transform: scale(0.9);
 }
 
+/* Efecto - tarjeta aparece suavemente */
+
 .fade-in {
     opacity: 1;
     transform: scale(1);
 }
+
+
+/* Estilo de la imagen del Pokemon */
 
 .card img {
     margin-top: 50px;
@@ -272,10 +299,14 @@ body {
     z-index: 2;
 }
 
+/* Efecto mouse */
+
 .card img:hover {
     transform: scale(1.18) translateY(-30px);
     box-shadow: 0 12px 32px rgba(0,0,0,0.18);
 }
+
+/* estilo de los botones y selector  */
 
 #prev, #next, #type-filter, #clear-filter {
     padding: 12px 20px;
@@ -289,6 +320,7 @@ body {
 }
 
 /* Colores oscuros para cada tipo de botón */
+
 .btn-type-normal { background-color: #888888; }
 .btn-type-electric { background-color: #bba600; }
 .btn-type-fire { background-color: #b35a00 ; }
@@ -362,6 +394,7 @@ body {
     box-shadow: 0 4px 16px rgba(0,0,0,0.16);
 }
 
+/* fondo oscuro de la ventana emergente. */
 
 .modal {
     display: none; 
@@ -388,6 +421,11 @@ body {
     position: relative;
 }
 
+
+/* Contenedor blanco central */
+
+/* # - para selecciona un elemento del atributo por su ID */
+
 #close-modal {
     position: absolute;
     top: 10px;
@@ -404,11 +442,15 @@ body {
     color: black;
 }
 
+/* nombre del Pokémon */
+
 #modal-name {
     font-size: 2em;
     margin-bottom: 10px;
     color: #333;
 }
+
+/* imagen del Pokémon  */
 
 #modal-img {
     width: 200px;
@@ -418,11 +460,15 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Id del pokemon */
+
 #modal-id {
     font-size: 1.2em;
     color: #666;
     margin-bottom: 20px;
 }
+
+/* Contenedor de los datos del pokemon */
 
 .modal-info {
     display: flex;
@@ -448,6 +494,8 @@ body {
     color: #333;
 }
 
+/* Barritas*/
+
 .modal-stats span {
     display: block;
     margin: 5px 0;
@@ -457,7 +505,8 @@ body {
     font-size: 0.9em;
 }
 
-/* Barras de estado para estadísticas */
+/* Barras visuales de estado para estadísticas */
+
 .stat-row {
     display: flex;
     align-items: center;
